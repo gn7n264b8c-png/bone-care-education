@@ -7,6 +7,7 @@
 - 사진 중심의 홈 화면과 하위 메뉴별 독립 학습 페이지
 - 골다공증 정의, 골절 위험, 검사, 예방과 치료 안내
 - 테리파라타이드와 제품별 주사기구 구분, 공통 안전 투여 순서
+- 테로사펜 자가주사 교육영상과 9단계 사진 교육
 - 보관·폐기·이상반응·응급상황 안내
 - IOF 자료를 바탕으로 한 비진단성 위험요인 자가체크
 - 주사 안전 OX 퀴즈
@@ -28,6 +29,7 @@
 - [질병관리청 국가건강정보포털 - 골다공증](https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833)
 - [식품의약품안전처 의약품안전나라](https://nedrug.mfds.go.kr/)
 - [대원제약 테로사카트리지주·테로사펜 제품정보](https://www.daewonpharm.com/products/sub02_01_view.jsp?PRD_NO=1343&lang=1&mb=02&mm=22&ms=211)
+- [유럽의약품청(EMA) 테로사 제품정보·펜 사용설명서](https://www.ema.europa.eu/en/documents/product-information/terrosa-epar-product-information_en.pdf)
 - [국제골다공증재단(IOF) 한국어 위험도 체크](https://www.osteoporosis.foundation/sites/iofbonehealth/files/2020-10/OsteoporosisRiskCheck_Leaflet_korean.pdf)
 - [한국의약품안전관리원 의약품 이상사례 보고시스템](https://kaers.drugsafe.or.kr/main.do)
 
@@ -49,4 +51,4 @@ GitHub Pages 설정에서 `main` 브랜치의 저장소 루트(`/`)를 배포 �
 
 ## 권리 안내
 
-코드와 콘텐츠에는 별도의 오픈소스 라이선스를 부여하지 않았습니다. 원본 교육자료의 이미지·PDF·동영상은 재배포 권한이 확인되지 않아 이 저장소에 포함하지 않았습니다. 홈 화면의 사진과 일러스트는 교육자료의 분위기와 정보 구조만 참고해 이 사이트를 위해 새로 제작한 이미지입니다.
+코드와 콘텐츠에는 별도의 오픈소스 라이선스를 부여하지 않았습니다. 테로사펜 교육영상과 단계별 캡처 이미지는 사이트 제작을 위해 사용자가 제공한 자료를 바탕으로 포함했으며, 그 밖의 권한이 확인되지 않은 원본 교육자료는 저장소에 포함하지 않았습니다. 홈 화면의 사진과 일러스트는 교육자료의 분위기와 정보 구조만 참고해 이 사이트를 위해 새로 제작한 이미지입니다.

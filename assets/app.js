@@ -17,6 +17,32 @@
     toastTimer = setTimeout(() => { toast.hidden = true; }, 3200);
   }
 
+  async function initChunkedVideo() {
+    const video = $("[data-chunked-video]");
+    if (!video) return;
+    const status = $("[data-video-status]");
+    const partCount = Number(video.dataset.videoParts);
+    const partBase = video.dataset.videoBase;
+    if (!partBase || !Number.isInteger(partCount) || partCount < 1) return;
+    if (location.protocol === "file:") {
+      if (status) status.textContent = "영상은 웹사이트 주소에서 재생할 수 있어요.";
+      return;
+    }
+    try {
+      const responses = await Promise.all(Array.from({ length: partCount }, (_, index) => fetch(`${partBase}${String(index).padStart(2, "0")}`)));
+      if (responses.some((response) => !response.ok)) throw new Error("video part request failed");
+      const buffers = await Promise.all(responses.map((response) => response.arrayBuffer()));
+      const videoUrl = URL.createObjectURL(new Blob(buffers, { type: "video/mp4" }));
+      video.src = videoUrl;
+      video.load();
+      video.addEventListener("loadedmetadata", () => { if (status) status.hidden = true; }, { once: true });
+      window.addEventListener("pagehide", () => URL.revokeObjectURL(videoUrl), { once: true });
+    } catch (_error) {
+      if (status) status.textContent = "영상을 불러오지 못했습니다. 아래 단계별 사진과 설명을 확인하세요.";
+    }
+  }
+  initChunkedVideo();
+
   function toISODate(date) {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");

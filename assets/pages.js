@@ -51,6 +51,7 @@
               <a href="./medicine.html" data-page-link="medicine">테리파라타이드란?</a>
               <a href="./products.html" data-page-link="products">내 제품 확인</a>
               <a href="./injection-guide.html" data-page-link="injection-guide">안전한 투여 순서</a>
+              <a href="./pen-guide.html" data-page-link="pen-guide">주사기 사용법</a>
             </div>
           </details>
           <details data-nav-group="safety">
@@ -183,7 +184,34 @@
 
   const injectionGuide = `
     <main id="main-content">${pageHero("주사 전, 천천히 한 단계씩", "안전한 투여를 위한 6단계", "버튼 조작·대기시간·카트리지 교체는 제품별 공식 설명서와 의료진 교육을 우선하세요.", "pink")}
-      <section class="content-section shell" data-speak-title="안전한 주사 순서"><ol class="step-grid"><li><span>01</span><div><h2>손 씻고 준비하기</h2><p>밝고 안전한 장소에서 손을 씻고 필요한 물품을 한곳에 놓습니다.</p></div></li><li><span>02</span><div><h2>제품 상태 확인하기</h2><p>제품명·사용기한·약액 상태를 확인합니다. 이상이 있으면 사용하지 마세요.</p></div></li><li><span>03</span><div><h2>새 주사침 연결하기</h2><p>매 투여마다 새 주사침을 사용하고 다른 사람과 공유하지 않습니다.</p></div></li><li><span>04</span><div><h2>주사 부위 정하기</h2><p>의료진에게 배운 복부 또는 허벅지 부위를 선택하고 매일 부위를 바꿉니다.</p></div></li><li><span>05</span><div><h2>설명서대로 투여하기</h2><p>용량과 투여 완료 표시를 확인합니다. 기억이 나지 않으면 추측하지 마세요.</p></div></li><li><span>06</span><div><h2>침을 분리하고 기록하기</h2><p>사용한 침을 안전용기에 넣고 펜은 즉시 냉장 보관한 뒤 건강수첩에 기록합니다.</p></div></li></ol><div class="notice soft"><strong>처음 몇 차례는 앉거나 누울 수 있는 곳에서</strong> 어지럼증이나 두근거림이 계속되거나 심해지면 의료진에게 알리세요.</div></section>
+      <section class="content-section shell" data-speak-title="안전한 주사 순서"><ol class="step-grid"><li><span>01</span><div><h2>손 씻고 준비하기</h2><p>밝고 안전한 장소에서 손을 씻고 필요한 물품을 한곳에 놓습니다.</p></div></li><li><span>02</span><div><h2>제품 상태 확인하기</h2><p>제품명·사용기한·약액 상태를 확인합니다. 이상이 있으면 사용하지 마세요.</p></div></li><li><span>03</span><div><h2>새 주사침 연결하기</h2><p>매 투여마다 새 주사침을 사용하고 다른 사람과 공유하지 않습니다.</p></div></li><li><span>04</span><div><h2>주사 부위 정하기</h2><p>의료진에게 배운 복부 또는 허벅지 부위를 선택하고 매일 부위를 바꿉니다.</p></div></li><li><span>05</span><div><h2>설명서대로 투여하기</h2><p>용량과 투여 완료 표시를 확인합니다. 기억이 나지 않으면 추측하지 마세요.</p></div></li><li><span>06</span><div><h2>침을 분리하고 기록하기</h2><p>사용한 침을 안전용기에 넣고 펜은 즉시 냉장 보관한 뒤 건강수첩에 기록합니다.</p></div></li></ol><div class="notice soft"><strong>처음 몇 차례는 앉거나 누울 수 있는 곳에서</strong> 어지럼증이나 두근거림이 계속되거나 심해지면 의료진에게 알리세요.</div><div class="page-next"><a href="./pen-guide.html">테로사펜 영상과 단계별 사진 보기 →</a></div></section>
+    </main>`;
+
+  const penSteps = [
+    ["01", "개봉일·유효일 확인하기", "assets/pen-guide/01-check-dates.webp", "테로사펜 라벨의 제품명과 사용기한을 확인하고, 새 카트리지의 첫 투여일을 기록합니다. 사용기한이 지났거나 라벨을 읽기 어렵다면 사용하지 마세요."],
+    ["02", "펜과 약액 상태 확인하기", "assets/pen-guide/02-check-medicine.webp", "펜이 손상되지 않았는지 확인하고 약액이 무색투명한지 살펴봅니다. 흐리거나 색이 변했거나 입자가 보이면 사용하지 말고 의료진 또는 약사에게 문의하세요."],
+    ["03", "펜 뚜껑 열기", "assets/pen-guide/03-remove-cap.webp", "검은색 펜 뚜껑을 곧게 빼서 카트리지 부분을 드러냅니다. 펜을 떨어뜨렸거나 이상이 보이면 다음 단계로 진행하지 마세요."],
+    ["04", "새 주사침 준비하기", "assets/pen-guide/04-new-needle.webp", "매번 새 주사침을 사용합니다. 포장이 뜯어졌거나 손상된 주사침은 버리고 새 제품을 준비하세요."],
+    ["05", "주사침 단단히 연결하기", "assets/pen-guide/05-attach-needle.webp", "주사침을 카트리지 홀더에 똑바로 대고 시계 방향으로 돌려 단단히 연결합니다. 무리하게 비스듬히 끼우지 마세요."],
+    ["06", "안쪽 주사침 캡 벗기기", "assets/pen-guide/06-remove-inner-cap.webp", "바깥쪽 큰 캡은 주사 후 침을 안전하게 분리할 때 필요하므로 보관하고, 안쪽 작은 캡만 벗겨 폐기합니다."],
+    ["07", "1회 용량 맞추기", "assets/pen-guide/07-set-dose.webp", "용량 조절 손잡이를 시계 방향으로 끝까지 돌려 표시창의 화살표가 기준선과 맞는지 확인합니다. 더 돌아가지 않을 때 억지로 힘을 주지 마세요."],
+    ["08", "주사 부위 소독하기", "assets/pen-guide/08-clean-site.webp", "의료진에게 교육받은 복부 또는 허벅지 부위를 선택해 알코올 솜으로 닦고 자연 건조합니다. 매일 이전 위치와 떨어진 곳으로 바꾸세요."],
+    ["09", "곧게 주사하고 6초 기다리기", "assets/pen-guide/09-inject.webp", "피부를 가볍게 잡고 바늘을 곧게 넣습니다. 버튼을 끝까지 누른 채 표시가 시작 위치로 돌아온 것을 확인하고, 바늘을 피부에 둔 채 6초 더 기다린 뒤 천천히 뺍니다."]
+  ];
+  const penGuide = `
+    <main id="main-content">${pageHero("테로사펜 영상 교육", "영상으로 보고, 사진으로 한 번 더", "이 페이지는 테로사카트리지주·테로사펜 사용자를 위한 보조교육입니다. 처방 의료진의 대면 교육과 제품 설명서를 우선하세요.", "purple")}
+      <section class="content-section shell pen-guide-page" data-speak-title="테로사펜 주사기 사용법">
+        <div class="video-learning-card">
+          <div class="video-learning-copy"><p class="eyebrow">먼저 전체 과정을 보세요</p><h2>테로사펜 자가주사 교육영상</h2><p>약 1분 38초 영상입니다. 재생·일시정지와 전체화면 버튼을 이용해 천천히 확인하세요.</p></div>
+          <div class="guide-video-wrap"><video class="guide-video" controls playsinline preload="metadata" poster="./assets/pen-guide/03-remove-cap.webp" aria-label="테로사펜 자가주사 사용방법 교육영상" data-chunked-video data-video-base="./assets/video-parts/terrosa-pen-guide.part" data-video-parts="9">이 브라우저에서는 영상을 재생할 수 없습니다. 아래 단계별 사진과 설명을 확인하세요.</video><p class="video-load-status" data-video-status role="status">영상을 준비하고 있어요.</p></div>
+        </div>
+        <div class="notice warning pen-guide-warning"><strong>이 영상은 테로사펜용입니다.</strong> 포스테오주나 다른 프리필드펜은 조작법이 다를 수 있습니다. 제품명이 다르면 이 순서를 따라 하지 말고 해당 제품 설명서와 의료진 교육을 확인하세요.</div>
+        <div class="section-heading"><p class="eyebrow">한 장씩 다시 보기</p><h2>단계별 사진 교육</h2><p>각 사진의 제목과 설명을 순서대로 읽어 보세요.</p></div>
+        <ol class="photo-step-list">${penSteps.map(([number, title, imagePath, description]) => `<li class="photo-step-card"><div class="photo-step-title"><span>${number}</span><h3>${title}</h3></div><img src="./${imagePath}" alt="${title} 장면" width="640" height="360"><p>${description}</p></li>`).join("")}</ol>
+        <section class="aftercare-card" aria-labelledby="aftercare-title"><div><p class="eyebrow">주사 직후</p><h2 id="aftercare-title">침 제거와 보관까지 마무리하세요</h2></div><ol><li>보관해 둔 바깥쪽 큰 캡을 조심히 씌웁니다.</li><li>캡을 잡고 반시계 방향으로 돌려 주사침을 분리합니다.</li><li>사용한 침은 뚫리지 않는 전용·단단한 용기에 넣습니다.</li><li>펜 뚜껑을 닫고 주사침을 분리한 상태로 즉시 2–8℃ 냉장 보관합니다.</li></ol></section>
+        <div class="notice strong"><strong>용량 표시가 시작 위치로 돌아오지 않았나요?</strong> 같은 날 다시 주사하지 말고 처방 의료기관이나 약사에게 문의하세요.</div>
+        <div class="source-banner"><div><strong>제품별 공식 안내를 함께 확인하세요.</strong><p>테로사펜은 올바른 주사방법을 교육받은 뒤 사용해야 하는 전문의약품입니다.</p></div><a class="button outline" href="https://www.daewonpharm.com/products/sub02_01_view.jsp?PRD_NO=1343&lang=1&mb=02&mm=22&ms=211" target="_blank" rel="noopener">대원제약 제품정보 ↗</a></div>
+      </section>
     </main>`;
 
   const storage = `
@@ -244,7 +272,7 @@
       <section class="content-section shell" data-speak-title="자주 묻는 질문"><div class="faq-list">${faqItems.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("")}</div><div class="help-banner"><div><strong>도움이 필요하신가요?</strong><p>약물 사용은 처방 의료진 또는 약사에게 문의하세요.</p></div><div><strong>응급 증상은 즉시 119</strong><p>호흡곤란, 얼굴·입술·목 부종, 전신 두드러기, 의식 저하는 기다리지 마세요.</p></div></div></section>
     </main>`;
 
-  const pages = { home, osteoporosis, "risk-check": riskCheck, prevention, medicine, products, "injection-guide": injectionGuide, storage, reactions, "knowledge-check": knowledgeCheck, journal, faq };
+  const pages = { home, osteoporosis, "risk-check": riskCheck, prevention, medicine, products, "injection-guide": injectionGuide, "pen-guide": penGuide, storage, reactions, "knowledge-check": knowledgeCheck, journal, faq };
 
   const footer = `
     <footer class="site-footer"><div class="shell footer-grid"><div><a class="footer-brand" href="./index.html"><img src="./assets/favicon.svg" alt="" width="42" height="42"><strong>뼈튼튼, 주사안심!</strong></a><p>환자와 보호자의 이해를 돕는 교육자료이며 진단, 처방, 의료진의 대면 교육을 대신하지 않습니다.</p></div><div><h2>공식 참고자료</h2><ul><li><a href="https://health.kdca.go.kr/healthinfo/biz/health/gnrlzHealthInfo/gnrlzHealthInfo/gnrlzHealthInfoView.do?cntnts_sn=5833" target="_blank" rel="noopener">질병관리청 골다공증 정보 ↗</a></li><li><a href="https://nedrug.mfds.go.kr/" target="_blank" rel="noopener">식약처 의약품안전나라 ↗</a></li><li><a href="https://www.osteoporosis.foundation/sites/iofbonehealth/files/2020-10/OsteoporosisRiskCheck_Leaflet_korean.pdf" target="_blank" rel="noopener">IOF 한국어 위험도 체크 ↗</a></li><li><a href="https://kaers.drugsafe.or.kr/main.do" target="_blank" rel="noopener">의약품 이상사례 보고 ↗</a></li></ul></div></div><div class="shell footer-bottom"><span>콘텐츠 검토일: 2026년 10월 22일</span><span>회원가입·광고·분석·서버 전송 없음</span></div></footer><div class="toast" id="toast" role="status" aria-live="polite" hidden></div>`;
@@ -258,7 +286,7 @@
 
   const current = document.querySelector(`[data-page-link="${page}"]`);
   current?.setAttribute("aria-current", "page");
-  const pageGroups = { osteoporosis: "bone", "risk-check": "bone", prevention: "bone", medicine: "medicine", products: "medicine", "injection-guide": "medicine", storage: "safety", reactions: "safety", "knowledge-check": "safety" };
+  const pageGroups = { osteoporosis: "bone", "risk-check": "bone", prevention: "bone", medicine: "medicine", products: "medicine", "injection-guide": "medicine", "pen-guide": "medicine", storage: "safety", reactions: "safety", "knowledge-check": "safety" };
   const group = pageGroups[page];
   if (group) document.querySelector(`[data-nav-group="${group}"] > summary`)?.setAttribute("aria-current", "true");
 })();
